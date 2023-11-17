@@ -109,7 +109,7 @@ function DetailProduct() {
                     </p>
                     <div className="underline"></div>
                     <br />
-                    <span>{type?.price}aa $</span>&nbsp;&nbsp;&nbsp;&nbsp;stock: <span>{type?.amount}</span>
+                    <span>{type?.price} ￥</span>&nbsp;&nbsp;&nbsp;&nbsp;stock: <span>{type?.amount}</span>
                     <p>{detailProduct.description}</p>
                     <b />
                     <label htmlFor="types">Choose a type:</label>
@@ -131,15 +131,15 @@ function DetailProduct() {
             </div>
             <br />
             <div className="description-detail">
-                <h1>Description</h1>
+                <h1>説明</h1>
                 <hr />
                 <p>{detailProduct.description}</p>
             </div>
-            <Feedback feedback={feedback} />
+            {/* <Feedback feedback={feedback} />
             <br />
             <div className="product-info-tabs">
                 <div className="header-feedback">
-                    <h3> Product review ({feedback.length})</h3>
+                    <h3>製品レビュー ({feedback.length})</h3>
                     <div className="underline2"></div>
                 </div>
                 <div className="feedback-item">
@@ -151,7 +151,7 @@ function DetailProduct() {
             </div>
             <br />
             <div>
-                <h2 className="h2">Related Products</h2>
+                <h2 className="h2">関連製品</h2>
                 <div className="products">
                     {products.map((product) => {
                         return product.category === detailProduct.category ? (
@@ -159,7 +159,7 @@ function DetailProduct() {
                         ) : null;
                     })}
                 </div>
-            </div>
+            </div> */}
         </>
     );
 }

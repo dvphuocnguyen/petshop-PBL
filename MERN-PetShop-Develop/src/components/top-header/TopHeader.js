@@ -4,7 +4,7 @@ import './topheader.css';
 import { Link } from 'react-router-dom';
 import React, { useContext } from 'react';
 import { GlobalState } from '../../GlobalState';
-import Logo from './icon/nlogo.svg';
+import Logo from './icon/logochocu.jpg';
 import { FaFontAwesome } from 'react-icons/fa';
 import classNames from 'classnames/bind';
 import styles from './Topheader.module.scss';
@@ -61,7 +61,7 @@ export const TopHeader = () => {
             <div className={cx('row2-topheader')}>
                 <p>Hi, {user.name}</p>
                 <ul className={cx('list-topheader')}>
-                    <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
+                    {/* <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                         <Link to="/history">
                             <AiOutlineHistory />
                         </Link>
@@ -70,7 +70,7 @@ export const TopHeader = () => {
                         <Link to="/infor">
                             <BiUser />
                         </Link>
-                    </li>
+                    </li> */}
                     <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                         <Link to="/" onClick={logoutUser}>
                             <HiOutlineLogout />

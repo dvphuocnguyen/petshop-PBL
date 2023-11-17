@@ -8,7 +8,7 @@ import { BiUser } from 'react-icons/bi';
 import { BsCart3 } from 'react-icons/bs';
 import { HiOutlineLogout } from 'react-icons/hi';
 import { AiOutlineHistory } from 'react-icons/ai';
-import Logo from './icon/logo-petsh.svg';
+import Logo from './icon/logochocu.jpg';
 import { gsap } from 'gsap';
 
 function Header() {

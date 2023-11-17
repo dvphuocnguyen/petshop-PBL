@@ -72,18 +72,18 @@ function Products() {
         <>
             <Filters />
             <div className="header-information">
-                <p className="header-label">Shop</p>
+                <p className="header-label">店</p>
                 <div className="header-direction">
-                    <Link to="/">Home /</Link>
-                    <Link to="/products">Shop</Link>
+                    <Link to="/">ホーム /</Link>
+                    <Link to="/products">店</Link>
                 </div>
             </div>
 
             {isAdmin && (
                 <div className="delete-all">
-                    <span>Select all</span>
+                    <span>すべて選択する</span>
                     <input type="checkbox" checked={isCheck} onChange={checkAll} />
-                    <button onClick={deleteAll}>delete all</button>
+                    <button onClick={deleteAll}>すべて削除する</button>
                 </div>
             )}
 

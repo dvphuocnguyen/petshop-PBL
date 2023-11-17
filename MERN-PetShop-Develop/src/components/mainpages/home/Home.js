@@ -9,9 +9,9 @@ export const Home = ({ hideHeaderPaths = [] }) => {
         <>
             <div className="home-container">
                 <NBanner />
-                <Service />
+                {/* <Service />
                 <AdvSafety />
-                <CService />
+                <CService /> */}
             </div>
         </>
     );

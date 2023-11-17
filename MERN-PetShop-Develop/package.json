@@ -59,7 +59,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://petshop-yq91.onrender.com",
+  "proxy": "http://localhost:5000",
   "devDependencies": {
     "husky": "^8.0.3"
   }

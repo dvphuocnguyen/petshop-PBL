@@ -8,7 +8,7 @@ import { BiUser } from 'react-icons/bi';
 import { BsCart3 } from 'react-icons/bs';
 import { HiOutlineLogout } from 'react-icons/hi';
 import { AiOutlineHistory, AiOutlineHeart } from 'react-icons/ai';
-import Logo from './icon/logo-white-1.svg';
+import Logo from './icon/logochocu.jpg';
 import { gsap } from 'gsap';
 import { Route, Router } from 'react-router-dom';
 
@@ -48,10 +48,10 @@ function Header() {
                         <div className="sd-body">
                             <ul>
                                 <li>
-                                    <Link to="/create_product">Create Product</Link>
+                                    <Link to="/create_product">クリエート プロダクト</Link>
                                 </li>
                                 <li>
-                                    <Link to="/category">Create Category</Link>
+                                    <Link to="/category">クリエート カテゴリー</Link>
                                 </li>
                                 {/* <li>
                                     <Link to="/revenue">Revenue</Link>
@@ -96,7 +96,7 @@ function Header() {
     };
 
     const styleMenu = {
-        left: menu ? 0 : '-100%',
+        left: menu ? 0 : '-60%',
     };
 
     return (
@@ -121,12 +121,12 @@ function Header() {
 
             <ul style={styleMenu}>
                 <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                    <Link to="/">{'home'}</Link>
+                    <Link to="/">{'ホーム'}</Link>
                 </li>
                 <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                    <Link to="/products">{isAdmin ? 'Products' : 'Shop'}</Link>
+                    <Link to="/products">{isAdmin ? 'アイテム' : 'アイテム'}</Link>
                 </li>
-                {isAdmin ? (
+                {/* {isAdmin ? (
                     <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                         <Link to="/revenue">{'Revenue'}</Link>
                     </li>
@@ -134,13 +134,14 @@ function Header() {
                     <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                         <Link to="/ranking">{'Ranking'}</Link>
                     </li>
-                )}
+                )} */}
                 {/* <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                     <Link to="/ranking">{isAdmin ? 'Revenue' : 'Ranking'}</Link>
                 </li> */}
-                <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                    <Link to="/contact">{'Contact'}</Link>
-                </li>
+                {/* <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
+                    <Link to="/contact">{'コンタック'}</Link>
+                </li> */}
+
                 {isAdmin && adminRouter()}
                 <li onClick={() => setMenu(!menu)}>
                     <img src={Close} alt="" width="300" className="menu" />

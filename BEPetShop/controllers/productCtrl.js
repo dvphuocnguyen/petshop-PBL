@@ -174,17 +174,41 @@ const productCtrl = {
       return res.status(500).json({ msg: err.message });
     }
   },
+  // searchProduct: async (req, res) => {
+  //   try {
+  //     const { searchToken } = req.query;
+  //     const products = await Products.find({
+  //       title: { $regex: searchToken, $options: "i" },
+  //     });
+  //     res.send(JSON.stringify(products));
+  //   } catch (error) {
+  //     res.send(JSON.stringify(error));
+  //   }
+  // },
   searchProduct: async (req, res) => {
     try {
-      const { searchToken } = req.query;
-      const products = await Products.find({
-        title: { $regex: searchToken, $options: "i" },
-      });
-      res.send(JSON.stringify(products));
+        const { searchToken } = req.body;
+
+        if (!searchToken) {
+            return res.status(400).json({ msg: "Search token is required." });
+        }
+
+        const products = await Products.find({
+            $or: [
+                { title: { $regex: `.*${searchToken}.*`, $options: "i" } },
+                { description: { $regex: `.*${searchToken}.*`, $options: "i" } },
+            ],
+        });
+
+        res.json({
+            status: "success",
+            result: products.length,
+            products: products,
+        });
     } catch (error) {
-      res.send(JSON.stringify(error));
+        res.status(500).json({ msg: error.message });
     }
-  },
+},
   getDetailProduct: async (req, res) => {
     try {
       const productId = req.params.id;

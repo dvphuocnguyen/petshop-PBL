@@ -15,7 +15,7 @@ export const Footer = () => {
     return (
         <>
             <footer className="site-footer">
-                <div className={cx('footter-dogs')}>
+                {/* <div className={cx('footter-dogs')}>
                     <img src={images.dog1} alt="" className={cx('footter-dogs-item')} />
                     <img src={images.dog2} alt="" className={cx('footter-dogs-item')} />
                     <img src={images.dog3} alt="" className={cx('footter-dogs-item')} />
@@ -24,7 +24,7 @@ export const Footer = () => {
                     <img src={images.dog6} alt="" className={cx('footter-dogs-item')} />
                     <img src={images.dog7} alt="" className={cx('footter-dogs-item')} />
                     <img src={images.dog8} alt="" className={cx('footter-dogs-item')} />
-                </div>
+                </div> */}
                 <div className="containers">
                     <div className="row-foot">
                         <div className="col-sm-12 col-md-6">
@@ -44,22 +44,22 @@ export const Footer = () => {
                             <h6>Categories</h6>
                             <ul className="footer-links">
                                 <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Dog</a>
+                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Thời trang</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Cat</a>
+                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Nội thất</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">PHP</a>
+                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Máy giặt</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Bird</a>
+                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Đồ điện tử</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Fish</a>
+                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">TV, Tủ lạnh</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Other</a>
+                                    <a href="https://www.facebook.com/profile.php?id=100009983138637">Đồ gia dụng</a>
                                 </li>
                             </ul>
                         </div>
