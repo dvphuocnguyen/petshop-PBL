@@ -30,7 +30,7 @@ function NLogin() {
 
             window.location.href = '/';
         } catch (err) {
-            // alert(err.response.data.msg);
+            alert('Login failed. Invalid email or password');
             console.log({ err });
         }
     };
@@ -44,25 +44,25 @@ function NLogin() {
     return (
         <div className={cx('login-page')}>
             <form onSubmit={loginSubmit} className={cx('register-form')}>
-                <h2>NLOGIN</h2>
+                <h2>ログイン</h2>
                 <div className={cx('input-info')}>
                     <div className={cx('info-name')}>
-                        <p className={cx('info-label')}>Your email</p>
+                        <p className={cx('info-label')}>メールアドレス</p>
                         <TiStarburst color="red" fontSize="7pt" />
                     </div>
                     <input type="email" name="email" required value={user.email} onChange={onChangeInput} />
                 </div>
                 <div className={cx('input-info')}>
                     <div className={cx('info-name')}>
-                        <p className={cx('info-label')}>Password</p>
+                        <p className={cx('info-label')}>パスワード</p>
                         <TiStarburst color="red" fontSize="7pt" />
                     </div>
                     <input type="password" name="password" required value={user.password} onChange={onChangeInput} />
                 </div>
                 <div className={cx('row')}>
-                    <button type="submit">Login</button>
+                    <button type="submit">ログイン</button>
                     <Link to="/nregister" className={cx('login-btn')}>
-                        Register
+                        登録する
                     </Link>
                 </div>
                 <hr />

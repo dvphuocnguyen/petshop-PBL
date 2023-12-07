@@ -8,7 +8,7 @@ const ItemCorrect = (items) => {
     const [item, setItem] = useState(items.item);
     const [checkdelivery, setcheckdelivery] = useState(false);
     const [token] = state.token;
-    //   console.log(items);
+    console.log(item);
     useEffect(() => {
         setItem(items.item);
     }, [items]);
@@ -19,12 +19,14 @@ const ItemCorrect = (items) => {
         }
         var delivery = window.prompt('Type delivery_Id');
         item.delivery = delivery;
-        console.log(item.delivery)
+        console.log(item.delivery);
         console.log(delivery);
         const rs = {
             delivery_id: delivery,
             order_id: id,
         };
+        item.delivery !== null ? (item.status = 'Confirmed') : (item.status = item.status);
+        console.log(item.status);
         // console.log(rs.delivery_id);
         if (window.confirm('Confirm this order?')) {
             setcheckdelivery(false);
@@ -45,6 +47,9 @@ const ItemCorrect = (items) => {
         // const id = e.target.value;
         // console.log(id);
     };
+    console.log(item);
+    console.log(item.status);
+
     return (
         <>
             <tr key={item._id}>
@@ -71,7 +76,7 @@ const ItemCorrect = (items) => {
                     </button>
                 </td>
                 <td>
-                    <Link to={`/history/${item._id}`}>Xem</Link>
+                    <Link to={`/history/${item._id}`}>見る</Link>
                 </td>
             </tr>
         </>

@@ -72,7 +72,7 @@ const Processed = () => {
                                                     <br />
                                                     <b>Address</b> : {process.address}
                                                     <br />
-                                                    <b>Phone number</b> : {process.phone}
+                                                    <b>電話番号</b> : {process.phone}
                                                 </div>
                                             );
                                         } else {

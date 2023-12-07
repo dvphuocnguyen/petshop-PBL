@@ -195,8 +195,8 @@ const productCtrl = {
 
         const products = await Products.find({
             $or: [
-                { title: { $regex: `.*${searchToken}.*`, $options: "i" } },
-                { description: { $regex: `.*${searchToken}.*`, $options: "i" } },
+                { title: { $regex: searchToken, $options: "i" } },
+                { description: { $regex: searchToken, $options: "i" } },
             ],
         });
 

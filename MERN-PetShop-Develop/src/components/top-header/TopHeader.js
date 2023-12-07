@@ -59,18 +59,19 @@ export const TopHeader = () => {
     const loggedRouter = () => {
         return (
             <div className={cx('row2-topheader')}>
-                <p>Hi, {user.name}</p>
+                <p className={cx('userName_label')}>{user.name} さん</p>
                 <ul className={cx('list-topheader')}>
-                    {/* <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
+                    <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                         <Link to="/history">
                             <AiOutlineHistory />
                         </Link>
                     </li>
+
                     <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                         <Link to="/infor">
                             <BiUser />
                         </Link>
-                    </li> */}
+                    </li>
                     <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                         <Link to="/" onClick={logoutUser}>
                             <HiOutlineLogout />
@@ -110,7 +111,7 @@ export const TopHeader = () => {
                             <p onMouseEnter={onEnter} onMouseLeave={onLeave}>
                                 <Link to="/nlogin">
                                     <FontAwesomeIcon icon={faSignOut} />
-                                    <span className={cx('label')}>Login</span>
+                                    <span className={cx('label')}>ログイン</span>
                                 </Link>
                             </p>
                         )}

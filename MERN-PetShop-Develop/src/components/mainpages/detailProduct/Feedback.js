@@ -8,7 +8,12 @@ const Feedback = (feedback) => {
         orange: '#FFA500',
         grey: '#808080',
     };
-    //console.log(feedbacks)
+
+    feedbacks.map((item, i) => {
+        console.log(item.rating);
+    });
+    console.log(feedbacks);
+    console.log(feedbacks.rating);
     const [result, setResult] = useState();
     useEffect(() => {
         if (feedbacks) {
@@ -19,6 +24,41 @@ const Feedback = (feedback) => {
             setResult(total / feedbacks.length);
         }
     }, [feedbacks]);
+    var totalstart = 0;
+    var start1 = 0;
+    var start2 = 0;
+    var start3 = 0;
+    var start4 = 0;
+    var start5 = 0;
+    feedbacks.map((item) => {
+        totalstart++;
+        switch (item.rating) {
+            case 1:
+                start1++;
+                break;
+            case 2:
+                start2++;
+                break;
+            case 3:
+                start3++;
+                break;
+            case 4:
+                start4++;
+                break;
+            case 5:
+                start5++;
+                break;
+            default:
+                break;
+        }
+    });
+
+    const startNumber = parseFloat(start5);
+    const totalNumber = parseFloat(totalstart);
+
+    // Check if the numbers are valid before performing the calculation
+    const percentage = (startNumber / totalNumber) * 100;
+    console.log(percentage);
     return (
         <>
             <div className="padding-feedback">
@@ -31,66 +71,66 @@ const Feedback = (feedback) => {
                         fullSymbol={<FaStar color={colors.orange} className="icon" />}
                         readonly
                     />
-                    &nbsp;average based on {feedbacks.length} reviews.
+                    &nbsp;{feedbacks.length} 件のレビューに基づく平均。
                 </p>
                 {/* commnet */}
                 <hr style={{ border: '3px solid #f1f1f1' }} />
             </div>
             <div className="row-feedback padding-feedback">
                 <div className="side-feedback">
-                    <div>5 star</div>
+                    <div>5 星</div>
                 </div>
                 <div className="middle-feedback">
                     <div className="bar-container-feedback">
-                        <div className="bar-5"></div>
+                        <div className="bar-5" style={{ width: `${(start5 / totalNumber) * 100}%` }}></div>
                     </div>
                 </div>
                 <div className="side-feedback right-feedback">
-                    <div>150</div>
+                    <div>{start5}</div>
                 </div>
                 <div className="side-feedback">
-                    <div>4 star</div>
+                    <div>4 星</div>
                 </div>
                 <div className="middle-feedback">
                     <div className="bar-container-feedback">
-                        <div className="bar-4"></div>
+                        <div className="bar-4" style={{ width: `${(start4 / totalNumber) * 100}%` }}></div>
                     </div>
                 </div>
                 <div className="side-feedback right-feedback">
-                    <div>63</div>
+                    <div>{start4}</div>
                 </div>
                 <div className="side-feedback">
-                    <div>3 star</div>
+                    <div>3 星</div>
                 </div>
                 <div className="middle-feedback">
                     <div className="bar-container-feedback">
-                        <div className="bar-3"></div>
+                        <div className="bar-3" style={{ width: `${(start3 / totalNumber) * 100}%` }}></div>
                     </div>
                 </div>
                 <div className="side-feedback right-feedback">
-                    <div>15</div>
+                    <div>{start3}</div>
                 </div>
                 <div className="side-feedback">
-                    <div>2 star</div>
+                    <div>2 星</div>
                 </div>
                 <div className="middle-feedback">
                     <div className="bar-container-feedback">
-                        <div className="bar-2"></div>
+                        <div className="bar-2" style={{ width: `${(start2 / totalNumber) * 100}%` }}></div>
                     </div>
                 </div>
                 <div className="side-feedback right-feedback">
-                    <div>6</div>
+                    <div>{start2}</div>
                 </div>
                 <div className="side-feedback">
-                    <div>1 star</div>
+                    <div>1 星</div>
                 </div>
                 <div className="middle-feedback">
                     <div className="bar-container-feedback">
-                        <div className="bar-1"></div>
+                        <div className="bar-1" style={{ width: `${(start1 / totalNumber) * 100}%` }}></div>
                     </div>
                 </div>
                 <div className="side-feedback right-feedback">
-                    <div>20</div>
+                    <div>{start1}</div>
                 </div>
             </div>
         </>

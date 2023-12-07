@@ -57,7 +57,7 @@ button {
 /* ------------------ Categories ------------------ */
 @import url('./components/mainpages/categories/categories.css');
 
-/* ------------------- Create Product -------------- */
+/* ------------------- クリエート プロダクト -------------- */
 @import url('./components/mainpages/createProduct/createProduct.css');
 
 @import url('./components/mainpages/type/type.css');

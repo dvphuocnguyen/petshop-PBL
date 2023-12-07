@@ -105,14 +105,14 @@ function DetailProduct() {
                             fullSymbol={<FaStar color={colors.orange} className="icon" />}
                             readonly
                         />
-                        &nbsp;{feedback.length} reviews
+                        &nbsp;{feedback.length} レビュー
                     </p>
                     <div className="underline"></div>
                     <br />
-                    <span>{type?.price} ￥</span>&nbsp;&nbsp;&nbsp;&nbsp;stock: <span>{type?.amount}</span>
+                    <span>{type?.price}￥</span>&nbsp;&nbsp;&nbsp;&nbsp;アマウント: <span>{type?.amount}</span>
                     <p>{detailProduct.description}</p>
                     <b />
-                    <label htmlFor="types">Choose a type:</label>
+                    <label htmlFor="types">タイプを選択する:</label>
                     <select onChange={checktype} name="type" id="type">
                         {detailProduct.types.map((type) => (
                             <option key={type._id} value={type._id}>
@@ -125,7 +125,7 @@ function DetailProduct() {
                         className="cart"
                         onClick={() => addCart(detailProduct, type)}
                     >
-                        Add to cart
+                        カートに追加
                     </Link>
                 </div>
             </div>
@@ -135,11 +135,11 @@ function DetailProduct() {
                 <hr />
                 <p>{detailProduct.description}</p>
             </div>
-            {/* <Feedback feedback={feedback} />
+            <Feedback feedback={feedback} />
             <br />
             <div className="product-info-tabs">
                 <div className="header-feedback">
-                    <h3>製品レビュー ({feedback.length})</h3>
+                    <h3> 製品レビュー ({feedback.length})</h3>
                     <div className="underline2"></div>
                 </div>
                 <div className="feedback-item">
@@ -159,7 +159,7 @@ function DetailProduct() {
                         ) : null;
                     })}
                 </div>
-            </div> */}
+            </div>
         </>
     );
 }

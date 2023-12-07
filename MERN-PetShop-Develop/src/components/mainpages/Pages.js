@@ -16,7 +16,8 @@ import CreateProduct from './createProduct/CreateProduct';
 import Type from './type/Type';
 import UserInfo from './auth/UserInfo';
 import Contact from './contact/Contact';
-
+import ChatroomPage from './contact/ChatroomPage';
+import DashboardPage from './contact/DashboardPage';
 import { GlobalState } from '../../GlobalState';
 import { Home } from './home/Home';
 import Revenue from './revenue/Revenue';
@@ -66,6 +67,9 @@ function Pages() {
             <Route path="comment/:id" element={<Comment />} />
             <Route path="products" element={<Products />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="chatroompage" element={<ChatroomPage />} />
+            <Route path="dashboardpage" element={<DashboardPage />} />
+
             <Route path="detail/:id" element={<DetailProduct />} />
 
             <Route path="processed" element={isLogged ? <Processed /> : <Loading />} />

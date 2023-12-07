@@ -12,19 +12,23 @@
     margin: 0;
     padding: 0;
 }
-.list-topheader  li{
+.list-topheader li {
     margin: 0 20px;
 }
 .row2-topheader {
     z-index: 10;
     display: flex;
-    flex-direction: column  ;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: auto;
 }
-.row2-topheader p{
+.row2-topheader p {
     margin: 0;
     padding: 0;
+}
+.userName_label {
+    height: auto;
+    width: 200px;
 }

@@ -19,8 +19,7 @@ const Comment = () => {
     const [loading, setLoading] = useState(false);
     const [token] = state.token;
     const history = useNavigate();
-    console.log(token);
-    console.log();
+    //console.log(token);
     useEffect(() => {
         if (params.id) {
             review.forEach((item) => {

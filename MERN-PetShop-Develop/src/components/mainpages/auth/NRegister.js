@@ -10,8 +10,8 @@ const cx = classNames.bind(styles);
 function NRegister() {
     const [user, setUser] = useState({
         name: '',
-        lname:'',
-        phone:'',
+        lname: '',
+        phone: '',
         email: '',
         password: '',
     });
@@ -42,13 +42,13 @@ function NRegister() {
     return (
         <div className={cx('login-page')}>
             <form onSubmit={registerSubmit} className={cx('register-form')}>
-                <h2>Register</h2>
+                <h2>登録する</h2>
                 <div className={cx('input-info')}>
                     <div className={cx('info-name')}>
-                        <p className={cx('info-label')}>First Name</p>
+                        <p className={cx('info-label')}>名前</p>
                         <TiStarburst color="red" fontSize="7pt" />
                     </div>
-                        <input type="text" name="name" required value={user.name} onChange={onChangeInput} />
+                    <input type="text" name="name" required value={user.name} onChange={onChangeInput} />
                 </div>
                 {/* <div className={cx('input-info')}>
                     <div className={cx('info-name')}>
@@ -59,28 +59,30 @@ function NRegister() {
                 </div> */}
                 <div className={cx('input-info')}>
                     <div className={cx('info-name')}>
-                        <p className={cx('info-label')}>Your phone</p>
+                        <p className={cx('info-label')}>電話番号</p>
                         <TiStarburst color="red" fontSize="7pt" />
                     </div>
-                        <input type="tel" name="phone" required value={user.phone} onChange={onChangeInput} />
+                    <input type="tel" name="phone" required value={user.phone} onChange={onChangeInput} />
                 </div>
                 <div className={cx('input-info')}>
                     <div className={cx('info-name')}>
-                        <p className={cx('info-label')}>Your email</p>
+                        <p className={cx('info-label')}>メールアドレス</p>
                         <TiStarburst color="red" fontSize="7pt" />
                     </div>
-                        <input type="email" name="email" required value={user.email} onChange={onChangeInput} />
+                    <input type="email" name="email" required value={user.email} onChange={onChangeInput} />
                 </div>
                 <div className={cx('input-info')}>
                     <div className={cx('info-name')}>
-                        <p className={cx('info-label')}>Password</p>
+                        <p className={cx('info-label')}>パスワード</p>
                         <TiStarburst color="red" fontSize="7pt" />
                     </div>
-                        <input type="password" name="password" required value={user.password} onChange={onChangeInput} />
+                    <input type="password" name="password" required value={user.password} onChange={onChangeInput} />
                 </div>
                 <div className={cx('row')}>
-                    <button type="submit">Register</button>
-                    <Link to="/nlogin" className={cx('login-btn')}>Login</Link>
+                    <button type="submit">登録する</button>
+                    <Link to="/nlogin" className={cx('login-btn')}>
+                        ログイン
+                    </Link>
                 </div>
                 <hr />
                 <img

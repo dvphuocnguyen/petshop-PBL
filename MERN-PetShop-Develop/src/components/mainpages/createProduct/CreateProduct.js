@@ -35,7 +35,7 @@ function CreateProduct() {
     const [types, setTypes] = useState([]);
 
     const [products] = state.productsAPI.products;
-    const [onEdit, setOnEdit] = useState(false);
+    const [onEdit, setOnEdit] = useState(true);
     const [callback, setCallback] = state.productsAPI.callback;
     // console.log(JSON.stringify(product.types[0].name))
     const [edit, setEdit] = useState({
@@ -52,8 +52,6 @@ function CreateProduct() {
             },
         ],
     });
-
-    useEffect(() => {}, []);
     useEffect(() => {
         if (param.id) {
             console.log(products);
@@ -127,9 +125,11 @@ function CreateProduct() {
         const { name, value } = e.target;
         setProduct({ ...product, [name]: value });
     };
-    const handleChangeInputEdit = (e) => {
+    const handleChangeInputEdit = (e, index) => {
         const { name, value } = e.target;
-        setEdit({ ...edit, [name]: value });
+        const updatedTypes = [...edit.types];
+        updatedTypes[index] = { ...updatedTypes[index], [name]: value };
+        setEdit({ ...edit, types: updatedTypes });
     };
 
     const handleSubmit = async (e) => {
@@ -206,7 +206,7 @@ function CreateProduct() {
             {onEdit ? (
                 <form onSubmit={handleSubmit}>
                     <div className="row">
-                        <label htmlFor="title">Name</label>
+                        <label htmlFor="title">_create product_name</label>
                         <input
                             type="text"
                             name="title"
@@ -219,20 +219,16 @@ function CreateProduct() {
                     </div>
                     <label htmlFor="title">Types</label>
 
-                    {edit.types.map((item) => {
+                    {edit.types.map((item, index) => {
                         return (
-                            <div className="row-type" key={item._id}>
+                            <div className="row-type" key={index}>
                                 <div>
                                     <label>Name</label>
                                     <input
                                         type="text"
                                         name="name"
-                                        id="name"
-                                        // required
                                         value={item.name || ''}
-                                        onChange={handleChangeInputEdit}
-
-                                        // onChange={(e) => setName(e.target.value)}
+                                        onChange={(e) => handleChangeInputEdit(e, index)}
                                     />
                                 </div>
                                 <div>
@@ -240,12 +236,8 @@ function CreateProduct() {
                                     <input
                                         type="text"
                                         name="price"
-                                        id="price"
-                                        // required
                                         value={item.price || ''}
-                                        onChange={handleChangeInputEdit}
-
-                                        // onChange={(e) => setName(e.target.value)}
+                                        onChange={(e) => handleChangeInputEdit(e, index)}
                                     />
                                 </div>
                                 <div>
@@ -253,17 +245,14 @@ function CreateProduct() {
                                     <input
                                         type="text"
                                         name="amount"
-                                        id="amount"
-                                        // required
                                         value={item.amount || ''}
-                                        onChange={handleChangeInputEdit}
-
-                                        // onChange={(e) => setName(e.target.value)}
+                                        onChange={(e) => handleChangeInputEdit(e, index)}
                                     />
                                 </div>
                             </div>
                         );
                     })}
+
                     <div className="row">
                         <label htmlFor="description">Description</label>
                         <textarea

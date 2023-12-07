@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { GlobalState } from '../../../GlobalState';
 import axios from 'axios';
-// import PaypalButton from './PaypalButton';
-//import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import PaypalButton from './PaypalButton';
+import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import { Link } from 'react-router-dom';
 
 function Cart() {
@@ -119,11 +119,11 @@ function Cart() {
                             <h3>￥ {product.types[0].price * product.quantity}</h3>
                             <p>{product.description}</p>
                             <div className="amount">
-                                {/* <button onClick={() => decrement(product._id)}> - </button> */}
-                                <button> - </button>
+                                <button onClick={() => decrement(product._id)}> - </button>
+                                <button> -- </button>
                                 <span>{product.quantity}</span>
-                                {/* <button onClick={() => increment(product._id)}> + </button> */}
-                                <button> + </button>
+                                <button onClick={() => increment(product._id)}> + </button>
+                                <button> ++ </button>
                             </div>
                             <div className="delete" onClick={() => removeProduct(product._id)}>
                                 X
@@ -134,13 +134,13 @@ function Cart() {
 
                 <div className="total">
                     <h3>全部: ￥ {total}</h3>
-                    {/* <PaypalButton total={total} tranSuccess={tranSuccess} /> */}
+                    <PaypalButton total={total} tranSuccess={tranSuccess} />
                     <Link
-                    // to="/checkout"
-                    // className="checkout"
-                    // onClick={() => {
-                    //     console.log(JSON.stringify(cart));
-                    // }}
+                        to="/checkout"
+                        className="checkout"
+                        onClick={() => {
+                            console.log(JSON.stringify(cart));
+                        }}
                     >
                         Checkout
                     </Link>

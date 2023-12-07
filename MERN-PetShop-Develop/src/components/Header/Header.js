@@ -138,9 +138,9 @@ function Header() {
                 {/* <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                     <Link to="/ranking">{isAdmin ? 'Revenue' : 'Ranking'}</Link>
                 </li> */}
-                {/* <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                    <Link to="/contact">{'コンタック'}</Link>
-                </li> */}
+                <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
+                    <Link to="/dashboardpage">{'コンタック'}</Link>
+                </li>
 
                 {isAdmin && adminRouter()}
                 <li onClick={() => setMenu(!menu)}>
