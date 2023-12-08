@@ -139,7 +139,7 @@ function Header() {
                     <Link to="/ranking">{isAdmin ? 'Revenue' : 'Ranking'}</Link>
                 </li> */}
                 <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                    <Link to="/dashboardpage">{'コンタック'}</Link>
+                    <Link to="/testchat">{'コンタック'}</Link>
                 </li>
 
                 {isAdmin && adminRouter()}
@@ -150,6 +150,6 @@ function Header() {
         </header>
     );
 }
-// comments
+//comments
 
 export default Header;

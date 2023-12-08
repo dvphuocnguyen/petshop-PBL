@@ -18,6 +18,7 @@ function DetailProduct() {
     const [type, setType] = useState();
     const [feedback, setFeedback] = useState([]);
     const [result, setResult] = useState(0);
+    const [isLogged] = useState(false);
     useEffect(() => {
         if (params.id) {
             products.forEach((product) => {
@@ -52,6 +53,13 @@ function DetailProduct() {
         }
     }, [feedback]);
 
+    const handleAddItem = () => {
+        if (isLogged) {
+            alert('dawng nhap di');
+        } else {
+            addCart(detailProduct, type);
+        }
+    };
     // useEffect(() => {
     //     feedback.map(item=>{
     //       console.log(item.rating)
@@ -120,11 +128,7 @@ function DetailProduct() {
                             </option>
                         ))}
                     </select>
-                    <Link
-                        to={`/detail/${detailProduct._id}`}
-                        className="cart"
-                        onClick={() => addCart(detailProduct, type)}
-                    >
+                    <Link to={`/detail/${detailProduct._id}`} className="cart" onClick={handleAddItem}>
                         カートに追加
                     </Link>
                 </div>

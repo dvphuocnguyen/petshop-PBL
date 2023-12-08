@@ -63,9 +63,9 @@ function OrderHistory() {
                                 <th>購入日</th>
                                 <th>アドレス</th>
                                 <th>電話番号</th>
-                                <th>Status</th>
-                                <th>Delivery</th>
-                                <th>Detail</th>
+                                <th>ステータス</th>
+                                <th>デリバリー</th>
+                                <th>詳細</th>
                             </tr>
                         </thead>
                         <tbody>

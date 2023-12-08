@@ -180,7 +180,7 @@ function CreateProduct() {
             setCallback(!callback);
             history('/');
         } catch (err) {
-            // alert(err.response.data.msg);
+            alert(err.response.data.msg);
         }
     };
     const styleUpload = {

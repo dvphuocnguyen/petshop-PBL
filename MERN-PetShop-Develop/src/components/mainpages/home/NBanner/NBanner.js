@@ -39,7 +39,7 @@ function NBanner() {
                     <img
                         className={cx('banner-img')}
                         //src="https://www.pfirst.jp/on/demandware.static/Sites-pfirst-Site/-/ja_JP/dw8c09b272/images/petsfirst/hero-mypage.jpeg"
-                        src="https://cdn0.fahasa.com/media/wysiwyg/Thang-12-2021/Phi%C3%AAn%20ch%E1%BB%A3%20c%C5%A91920x500.jpg"
+                        src="https://media.buyee.jp/lp/images/2023/11/mercari_2311_ogp_ja.png"
                         alt="logo1"
                     ></img>
                 </SwiperSlide>
@@ -47,14 +47,14 @@ function NBanner() {
                     <img
                         className={cx('banner-img')}
                         //src="https://www.pfirst.jp/on/demandware.static/-/Sites-pfirst-Library/ja_JP/dwa61b5a19/reservation.jpeg"
-                        src="https://file.hstatic.net/1000379579/collection/black_orange_simple_black_friday_sale_facebook_ad_0115a465393945658f7eef6f81456d30.png"
+                        src="https://media.buyee.jp/lp/images/2023/10/rakuten_rakuma_2311_top_sp_ogp_ja.png"
                         alt="logo1"
                     ></img>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
                         className={cx('banner-img')}
-                        src="https://www.pos365.vn/storage/app/media/2022/5/thanh-ly-hang-ton-kho/thanh-ly-hang-ton-kho.jpg"
+                        src="https://media.buyee.jp/lp/images/2023/11/bc_231108_top_sp_ogp_ja.png"
                         alt="logo1"
                     ></img>
                 </SwiperSlide>

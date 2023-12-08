@@ -44,7 +44,8 @@ import News from './Adv/News';
 import Header from '../Header/Header';
 import { TopHeader } from '../top-header/TopHeader';
 import Footer from '../footer/Footer';
-
+//testchat
+import TestChat from './contact/TestChat';
 function Pages() {
     const state = useContext(GlobalState);
     const [isLogged] = state.userAPI.isLogged;
@@ -69,6 +70,7 @@ function Pages() {
             <Route path="contact" element={<Contact />} />
             <Route path="chatroompage" element={<ChatroomPage />} />
             <Route path="dashboardpage" element={<DashboardPage />} />
+            <Route path="testchat" element={<TestChat />} />
 
             <Route path="detail/:id" element={<DetailProduct />} />
 

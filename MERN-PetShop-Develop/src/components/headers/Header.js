@@ -18,6 +18,16 @@ function Header() {
     const [cart] = state.userAPI.cart;
     const [menu, setMenu] = useState(false);
 
+    const [isLoged, setIsLoged] = useState(false); // Giả sử bạn sử dụng state để theo dõi trạng thái đăng nhập
+    const handleCartClick = () => {
+        if (!isLoged) {
+            alert('Please login to access the cart.');
+            console.log('aa');
+        } else {
+            return;
+        }
+    };
+
     const onEnter = ({ currentTarget }) => {
         gsap.to(currentTarget, {
             repeatDelay: 1,
@@ -103,7 +113,6 @@ function Header() {
             <div className="menu" onClick={() => setMenu(!menu)}>
                 <img src={Menu} alt="" width="30" />
             </div>
-
             <div className="logo">
                 <h1>
                     <Link to="/">
@@ -116,7 +125,6 @@ function Header() {
                     </Link>
                 </h1>
             </div>
-
             <ul style={styleMenu}>
                 <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
                     <Link to="/">{'home'}</Link>
@@ -136,12 +144,20 @@ function Header() {
                     <img src={Close} alt="" width="30" className="menu" />
                 </li>
             </ul>
-            {isAdmin ? (
-                ''
+            {isLogged ? (
+                <div className="cart-icon">
+                    <p>bbb</p>
+                    <span>{cart.length} qqq</span>
+                    <Link to="/cart">
+                        {<img src={cart} alt="" width="30" />}
+                        <BsCart3 />
+                    </Link>
+                </div>
             ) : (
                 <div className="cart-icon">
+                    <p>aaaa</p>
                     <span>{cart.length}</span>
-                    <Link to="/cart">
+                    <Link to="/nlogin">
                         {<img src={cart} alt="" width="30" />}
                         <BsCart3 />
                     </Link>

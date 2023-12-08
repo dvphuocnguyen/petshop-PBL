@@ -38,10 +38,10 @@ function OrderDetails() {
                     <table>
                         <thead>
                             <tr>
-                                <th>Tên</th>
+                                <th>名前</th>
                                 <th>アドレス</th>
-                                <th>SDT</th>
-                                <th>Status</th>
+                                <th>電話番号</th>
+                                <th>ステータス</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,11 +57,11 @@ function OrderDetails() {
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Price</th>
-                                <th>Type</th>
-                                <th>Review</th>
+                                <th>プロダックト</th>
+                                <th>数量</th>
+                                <th>値段</th>
+                                <th>種類</th>
+                                <th>レビュー</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -76,11 +76,11 @@ function OrderDetails() {
                                     <td>$ {item.price}</td>
                                     {isAdmin ? (
                                         <td>
-                                            <Link to={`/detail/${item.product_id}`}>Xem review user</Link>
+                                            <Link to={`/detail/${item.product_id}`}>ユーザーレビューを見る</Link>
                                         </td>
                                     ) : (
                                         <td>
-                                            <Link to={`/comment/${item.product_id}`}>review</Link>
+                                            <Link to={`/comment/${item.product_id}`}>レビュー</Link>
                                         </td>
                                     )}
                                 </tr>
@@ -93,11 +93,11 @@ function OrderDetails() {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Type</th>
-                            <th>Review</th>
+                            <th>プロダックト</th>
+                            <th>数量</th>
+                            <th>値段</th>
+                            <th>種類</th>
+                            <th>レビュー</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -112,11 +112,11 @@ function OrderDetails() {
                                 <td>$ {item.price}</td>
                                 {isAdmin ? (
                                     <td>
-                                        <Link to={`/detail/${item.product_id}`}>Xem review user</Link>
+                                        <Link to={`/detail/${item.product_id}`}>ユーザーレビューを見る</Link>
                                     </td>
                                 ) : (
                                     <td>
-                                        <Link to={`/comment/${item.product_id}`}>review</Link>
+                                        <Link to={`/comment/${item.product_id}`}>レビュー</Link>
                                     </td>
                                 )}
                             </tr>

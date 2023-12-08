@@ -37,11 +37,11 @@ function Products() {
             const deleteProduct = axios.delete(`/api/products/${id}`, {
                 headers: { Authorization: token },
             });
-
+            alert('Product deleted successfully1');
             await destroyImg;
             await deleteProduct;
             setCallback(!callback);
-            setLoading(false);
+            alert('Product deleted successfully2');
         } catch (err) {
             // alert(err.response.data.msg);
             console.log(err);

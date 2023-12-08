@@ -37,8 +37,8 @@ app.use('/api', require('./routes/address/province'))
 app.use('/api', require('./routes/orderRouter'))
 app.use("/api", require("./routes/paypalRouter"))
 //chat
-app.use("/api", require("./routes/chatroom"))
-app.use("/api", require("./routes/message"))
+// app.use("/api", require("./routes/chatroom"))
+// app.use("/api", require("./routes/message"))
 
 
 // Connect to mongodb
@@ -68,7 +68,7 @@ app.listen(PORT, () => {
     console.log('Server is running on port', PORT)
 })
 /// chat
-
+/*
 const io = require("socket.io")(server, {
     allowEIO3: true,
     cors: {
@@ -126,3 +126,4 @@ const io = require("socket.io")(server, {
       }
     });
   });
+  */
