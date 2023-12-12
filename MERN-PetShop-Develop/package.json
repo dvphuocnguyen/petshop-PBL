@@ -62,7 +62,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://l.facebook.com/l.php?u=https%3A%2F%2Fpetshop-rmzp.onrender.com%2F%3Ffbclid%3DIwAR0I-4iZTUYcvKrpJgJskel0hntPXenquFILjSKQsCwmogfVO1zAabfYh_Y&h=AT29iXvO_JSaq9sfRYmQLD1hCGRkCxDOd42uagqCLiaF66EK2Tzohag9Ju6hF9d7PH3yMrtnowiTdI-EVz5zgKa8JObOmfPXiSRiKwXnoVwNzdrnEfbdwyWCFcLjd0p5W-I7Xw",
+  "proxy": "https://backendchocu.onrender.com",
   "devDependencies": {
     "husky": "^8.0.3"
   },
