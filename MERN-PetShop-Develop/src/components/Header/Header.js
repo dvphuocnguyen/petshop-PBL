@@ -5,12 +5,12 @@ import Close from './icon/close.svg';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { BiUser } from 'react-icons/bi';
-import { BsCart3 } from 'react-icons/bs';
+// import { BsCart3 } from 'react-icons/bs';
 import { HiOutlineLogout } from 'react-icons/hi';
 import { AiOutlineHistory, AiOutlineHeart } from 'react-icons/ai';
-import Logo from './icon/logochocu.jpg';
+// import Logo from './icon/logochocu.jpg';
 import { gsap } from 'gsap';
-import { Route, Router } from 'react-router-dom';
+// import { Route, Router } from 'react-router-dom';
 
 function Header() {
     const state = useContext(GlobalState);
@@ -73,27 +73,27 @@ function Header() {
         );
     };
 
-    const loggedRouter = () => {
-        return (
-            <>
-                <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                    <Link to="/history">
-                        <AiOutlineHistory />
-                    </Link>
-                </li>
-                <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                    <Link to="/infor">
-                        <BiUser />
-                    </Link>
-                </li>
-                <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
-                    <Link to="/" onClick={logoutUser}>
-                        <HiOutlineLogout />
-                    </Link>
-                </li>
-            </>
-        );
-    };
+    // const loggedRouter = () => {
+    //     return (
+    //         <>
+    //             <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
+    //                 <Link to="/history">
+    //                     <AiOutlineHistory />
+    //                 </Link>
+    //             </li>
+    //             <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
+    //                 <Link to="/infor">
+    //                     <BiUser />
+    //                 </Link>
+    //             </li>
+    //             <li onMouseEnter={onEnter} onMouseLeave={onLeave}>
+    //                 <Link to="/" onClick={logoutUser}>
+    //                     <HiOutlineLogout />
+    //                 </Link>
+    //             </li>
+    //         </>
+    //     );
+    // };
 
     const styleMenu = {
         left: menu ? 0 : '-60%',
