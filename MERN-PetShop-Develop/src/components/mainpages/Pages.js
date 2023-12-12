@@ -68,8 +68,6 @@ function Pages() {
             <Route path="comment/:id" element={<Comment />} />
             <Route path="products" element={<Products />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="chatroompage" element={<ChatroomPage />} />
-            <Route path="dashboardpage" element={<DashboardPage />} />
             <Route path="testchat" element={<TestChat />} />
 
             <Route path="detail/:id" element={<DetailProduct />} />

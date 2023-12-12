@@ -92,7 +92,7 @@ function OrderHistory() {
                         <tbody>
                             {history.map((items) => (
                                 <tr key={items._id}>
-                                    {/* <td>{items._id}</td> */ console.log(items)}
+                                    {/* <td>{items._id}</td> */}
                                     <td>{new Date(items.createdAt).toLocaleDateString()}</td>
                                     <td>{items.address}</td>
                                     <td>{items.phone}</td>

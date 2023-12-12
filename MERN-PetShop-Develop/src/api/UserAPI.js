@@ -28,7 +28,7 @@ function UserAPI(token) {
             getUser();
         }
     }, [token]);
-    console.log(token);
+    // console.log(token);
     const addCart = async (product, type) => {
         console.log(type.amount);
         if (!isLogged) return alert('Please login to continue buying');

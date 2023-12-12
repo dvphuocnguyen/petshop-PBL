@@ -39,7 +39,7 @@ const Processed = () => {
             setLoading(false);
             console.log(res.data.url);
             window.open(res.data.url, '_blank');
-            //alert('Bạn đã đặt hàng thành công.');
+            alert('Bạn đã đặt hàng thành công.');
             history('/history');
         }
     };
