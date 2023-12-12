@@ -5,13 +5,16 @@ const paypalCtrl = {
 
     payment: async (res, amount, address, order_id) => {
         try {
+            console.log("oke payment step1 ");
             const payment = {
                 "intent": "sale",
                 "payer": {
                     "payment_method": "paypal"
                 },
                 "redirect_urls": {
-                    "return_url": "http://pet.kreazy.me/api/paypal/success",
+                    //"return_url": "http://pet.kreazy.me/api/paypal/success",
+                    "return_url": "https://www.sandbox.paypal.com/us/cgi-bin/webscr?cmd=_profile-website-payments",
+                    // new url
                     "cancel_url": "http://pet.kreazy.me/api/paypal/cancel"
                 },
                 "transactions": [{
@@ -47,7 +50,7 @@ const paypalCtrl = {
             })
         } catch (err) {
             console.log(err)
-            return res.status(500).json({ message: err.message })
+            return console.log(res.status(500).json({ message: err.message }));
         }
     },
     success: async (req, res) => {

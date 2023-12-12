@@ -23,13 +23,13 @@ const orderSchema = new mongoose.Schema({
     },
     address: {
         type: String,
-        default: "64 Nguyen Luong Bang",
+        default: "21 truong van da",
         required: true
     },
     phone: {
         type: String,
         required: true,
-        default: "0123456789"
+        default: "0932572164"
     },
     delivery: {
         type: String,
