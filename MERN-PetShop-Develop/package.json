@@ -62,7 +62,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://backendchocu.onrender.com",
+  "proxy": "https://backendchocu.onrender.com/",
   "devDependencies": {
     "husky": "^8.0.3"
   },
