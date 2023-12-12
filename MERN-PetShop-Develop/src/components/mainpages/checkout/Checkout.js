@@ -29,7 +29,7 @@ const Checkout = () => {
     const history = useNavigate();
     const [token] = state.token;
     //const [orderitem,setOrderItem] = useState();
-    console.log(token);
+    //console.log(token);
     //const [orders, setOrders] = state.orderAPI.order;
     const handleChangeInput = (e) => {
         const { name, value } = e.target;
