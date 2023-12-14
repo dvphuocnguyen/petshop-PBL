@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import React, { useContext } from 'react';
 import { GlobalState } from '../../GlobalState';
 import Logo from './icon/logochocu.jpg';
-import { FaFontAwesome } from 'react-icons/fa';
 import classNames from 'classnames/bind';
 import styles from './Topheader.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -19,9 +18,7 @@ import { AiOutlineHistory } from 'react-icons/ai';
 import { BiUser } from 'react-icons/bi';
 import { HiOutlineLogout } from 'react-icons/hi';
 import axios from 'axios';
-import UserAPI from '../../api/UserAPI';
-import UserInfo from '../mainpages/auth/UserInfo';
-import Tippy from '@tippyjs/react';
+
 ///
 
 const cx = classNames.bind(styles);
@@ -33,7 +30,7 @@ export const TopHeader = () => {
     const [cart] = state.userAPI.cart;
 
     //
-    const token = state.token;
+    //const token = state.token;
     // console.log(`token:`,token);
     const [user] = state.userAPI.detail;
     // console.log(`user`,user);

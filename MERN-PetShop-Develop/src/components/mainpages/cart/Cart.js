@@ -97,13 +97,20 @@ function Cart() {
     // hom qua lam toi day
     const Checkout = async (e) => {
         e.preventDefault();
-        await axios.post(
-            '/api/orders/checkout',
-            { cart },
-            {
-                headers: { Authorization: token },
-            },
-        );
+    
+        try {
+            await axios.post(
+                '/api/orders/checkout',
+                { cart },
+                {
+                    headers: { Authorization: token },
+                },
+            );
+            console.log('Checkout successful');  // Log thông báo nếu không có lỗi
+        } catch (error) {
+            console.error('Error during checkout:', error);
+            // Xử lý lỗi ở đây, ví dụ hiển thị thông báo cho người dùng hoặc thực hiện các hành động cần thiết.
+        }
     };
 
     if (cart.length === 0) return <h2 style={{ textAlign: 'center', fontSize: '2rem' }}>No product </h2>;
@@ -120,10 +127,8 @@ function Cart() {
                             <p>{product.description}</p>
                             <div className="amount">
                                 <button onClick={() => decrement(product._id)}> - </button>
-                                <button> -- </button>
                                 <span>{product.quantity}</span>
                                 <button onClick={() => increment(product._id)}> + </button>
-                                <button> ++ </button>
                             </div>
                             <div className="delete" onClick={() => removeProduct(product._id)}>
                                 X

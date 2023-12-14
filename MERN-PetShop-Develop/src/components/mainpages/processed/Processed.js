@@ -7,16 +7,16 @@ import Loading from '../utils/loading/Loading';
 const Processed = () => {
     const state = useContext(GlobalState);
     //console.log(state)
-    const [process, setProcess] = state.orderAPI.processed;
+    const [process] = state.orderAPI.processed;
     const [token] = state.token;
-    const [detail, setDetail] = state.userAPI.detail;
+    const [detail] = state.userAPI.detail;
     console.log(detail._id);
     const [userDetail, setUserDetail] = useState([]);
     const [loading, setLoading] = useState(false);
 
     console.log(process.user_id);
     useEffect(() => {
-        if (detail._id == process.user_id) {
+        if (detail._id === process.user_id) {
             setUserDetail(detail);
         }
     }, []);

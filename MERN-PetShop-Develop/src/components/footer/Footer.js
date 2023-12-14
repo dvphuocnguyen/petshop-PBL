@@ -5,9 +5,9 @@ import images from '../../asset/img';
 
 import classNames from 'classnames/bind';
 import styles from './Footer.module.scss';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fa0, faArrowAltCircleRight, faToggleOn } from '@fortawesome/free-solid-svg-icons';
+// import { Link } from 'react-router-dom';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { fa0, faArrowAltCircleRight, faToggleOn } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 

@@ -12,7 +12,7 @@ function ProductItem({ product, isAdmin, deleteProduct, handleCheck }) {
     useEffect(() => {
         categoriesName.forEach((item) => {
             //console.log(item);
-            if (item._id == product.category) {
+            if (item._id === product.category) {
                 setNewCate(item.name);
             }
         });

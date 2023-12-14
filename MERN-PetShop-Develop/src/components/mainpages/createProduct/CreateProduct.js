@@ -178,7 +178,7 @@ function CreateProduct() {
             }
 
             setCallback(!callback);
-            history('/');
+            history('/products');
         } catch (err) {
             alert(err.response.data.msg);
         }
@@ -206,7 +206,7 @@ function CreateProduct() {
             {onEdit ? (
                 <form onSubmit={handleSubmit}>
                     <div className="row">
-                        <label htmlFor="title">_create product_name</label>
+                        <label htmlFor="title">Edit product</label>
                         <input
                             type="text"
                             name="title"

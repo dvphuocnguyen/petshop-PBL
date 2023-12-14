@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './AdvSafety.module.scss';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from '../../Button/Button';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import Button from '../../Button/Button';
 
 const cx = classNames.bind(styles);
 

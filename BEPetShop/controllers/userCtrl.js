@@ -82,7 +82,34 @@ const userCtrl = {
       return res.status(500).json({ msg: err.message });
     }
   },
-//////////// login
+//////////// edit
+
+  editTT: async (req, res) => {
+  const userId = req.params.userId;
+  const { name, phone, email } = req.body;
+
+  try {
+      // Tìm người dùng trong cơ sở dữ liệu
+      const user = await Users.findById(userId);
+
+      if (!user) {
+          return res.status(404).json({ success: false, message: 'User not found' });
+      }
+
+      // Cập nhật thông tin người dùng
+      user.name = name || user.name;
+      user.phone = phone || user.phone;
+      user.email = email || user.email;
+
+      // Lưu vào cơ sở dữ liệu
+      await user.save();
+      console.log('Edited user information in the database:', { userId, name, phone, email });
+      res.status(200).json({ success: true });
+  } catch (error) {
+      console.error('Error editing user information in the database:', error);
+      res.status(500).json({ success: false, error: error.message });
+  }
+},
 
 
 ////////////

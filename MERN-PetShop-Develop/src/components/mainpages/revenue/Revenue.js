@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ChartRevenue from "../chartRevenue/ChartRevenue";
 import "./revenue.css";
 import { BsBarChart, BsCalendar4Week, BsDownload } from "react-icons/bs";

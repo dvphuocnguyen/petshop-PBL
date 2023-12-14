@@ -8,7 +8,7 @@ function BtnRender({ product, deleteProduct }) {
   const state = useContext(GlobalState);
   const [isAdmin] = state.userAPI.isAdmin;
   const [isLogged] = state.userAPI.isLogged;
-  const addCart = state.userAPI.addCart;
+  //const addCart = state.userAPI.addCart;
   const Check = async () => {
     if (!isLogged) {
       alert('Please login to continue buying');
@@ -24,7 +24,7 @@ function BtnRender({ product, deleteProduct }) {
         <>
           <Link
             id="btn_buy"
-            to="#!"
+            to="/products"
             onClick={() => deleteProduct(product._id, product.images.public_id)}
           >
             <RiDeleteBinLine />
