@@ -19,6 +19,9 @@ function DetailProduct() {
     const [feedback, setFeedback] = useState([]);
     const [result, setResult] = useState(0);
     const [isLogged] = useState(false);
+
+    console.log(products);
+
     useEffect(() => {
         if (params.id) {
             products.forEach((product) => {
