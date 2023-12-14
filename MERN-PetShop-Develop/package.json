@@ -42,10 +42,10 @@
     "tippy": "^0.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "start": "react-scripts start --host=0.0.0.0 --disableHostCheck=true",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -64,7 +64,8 @@
   },
   "proxy": "https://backendchocu1.onrender.com/",
   "devDependencies": {
-    "husky": "^8.0.3"
+  "husky": "^8.0.3",
+  "@babel/plugin-proposal-private-property-in-object": "^7.16.7"
   },
   "engines": {
     "node": "16.x"
